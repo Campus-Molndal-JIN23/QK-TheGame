@@ -17,7 +17,7 @@ public class Game {
     private static void firstMenu(Player p1, Shop sh) {
         int choice;
         do {
-            System.out.println("Main Menu:");
+            System.out.println("   Main Menu:");
             System.out.println("1. Go adventuring");
             System.out.println("2. Show details about your character");
             System.out.println("3. Go shop");
@@ -31,25 +31,21 @@ public class Game {
                     break;
                 case 2:System.out.println(p1.toString());
                     break;
-                case 3:
-                    sh.enter();
+                case 3: sh.enter();
                     break;
                 case 4:godbye();
                     break;
-                default:
-                    System.out.println("Invalid choice. Please try again.");
+                default:System.out.println("Invalid choice. Please try again.");
                     break;
             }
         } while (choice != 4);
     }
-
 
     private static void easyMonster(Scanner scanner, Player p1, Shop sh) {
         int monstersDefeated = 0;
         while (p1.getLevel() < 10) {
             System.out.println("\nYou have defeated " + monstersDefeated + " monsters.");
             Monster monster = new Monster("Giant Wurm");
-
             System.out.println("-----------------------------------");
             System.out.println(" You have encountered a " + monster.getName() + "!");
             System.out.println("-----------------------------------");
@@ -74,7 +70,6 @@ public class Game {
                 int exp = monster.getExp();
                 p1.gainExp(exp);
                 System.out.println("You are level " + p1.getLevel() + ", and you have " + p1.getExp() + " exp and " + p1.getHp() + " hp");
-                System.out.println("Monster are level " + monster.getLevel() + ", and  have " + monster.getExp() + " exp and " + monster.getHp() + " hp");
                 monstersDefeated++;
                 firstMenu(p1,sh);
             } else {
@@ -109,7 +104,7 @@ public class Game {
         System.out.println("Do you want to play again? Y or N");
         String svar = scanner.next();
         if (svar.equals("Y")) {
-            play();
+           play();
         } else {
             godbye();
             System.exit(0);

@@ -1,4 +1,3 @@
-import java.util.Random;
 
 public class Monster {
     private String name;
@@ -9,25 +8,21 @@ public class Monster {
     private  int hp;
     private int gold;
 
-
     public Monster(String name) {
         this.name = name;
-        this.attack = 5;
+        this.attack = 3;
         this.defense = 2;
         this.exp = 10;
         this.hp = 100;
         this.level = 1;
         this.gold = 2;
     }
-
     public void setHp(int hp) {
         this.hp += hp;
     }
-
     public String getName() {
         return name;
     }
-
     public int getExp() {
         return exp;
     }
@@ -42,18 +37,17 @@ public class Monster {
     }
 
     public void attack(Player player) {
-        int playerAttack = player.getAttack();
+        int playerAttack = player.getAttack() - 1;
         int damage = (int) (Math.random() * playerAttack * 5) + 1;
         player.takeDamage(damage);
         System.out.println(name + " attacks " + player.getName() + " for " + damage + " damage.");
     }
     public void defend(Player player) {
         int playerDefend = player.getDefend();
-        int newDefense = (int) (Math.random() * playerDefend * 5) + 1;
+        int newDefense = (int) (Math.random() * playerDefend * 5);
         player.setHp(newDefense);
         System.out.println(player.getName() + " defended your self by (" + newDefense + ").");
     }
-
     public void takeDamage(int damage) {
         this.hp -= damage;
         if (hp <= 0) {
@@ -67,7 +61,6 @@ public class Monster {
         this.level ++;
         this.exp += 30;
     }
-
     public int getDefense(){
         return defense;
     }
