@@ -1,7 +1,7 @@
 
 public class SpecificMonster extends Monster {
-    public SpecificMonster(String name,int level /*,int hp, int attack, int defend, int exp, int hp,int level*/) {
-        super(name/*, attack, defend, exp, hp,level*/);
+    public SpecificMonster(String name,int level) {
+        super(name);
         this.setHp(300);
     }
     public void monsterAttack(Player player) {

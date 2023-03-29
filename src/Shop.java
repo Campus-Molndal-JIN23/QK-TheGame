@@ -63,7 +63,8 @@ public class Shop {
                     }
                     break;
                 case "4":
-                    System.out.println("Goodbye!");
+                    System.out.println("Good luck!");
+                    System.out.println("''''''''''");
                     return;
                 default:
                     System.out.println("Invalid choice.");

@@ -15,7 +15,6 @@ public class Game {
     }
 
     private static void firstMenu(Player p1, Shop sh) {
-        Scanner input = new Scanner(System.in);
         int choice;
         do {
             System.out.println("Main Menu:");
@@ -24,7 +23,7 @@ public class Game {
             System.out.println("3. Go shop");
             System.out.println("4. Exit game");
             System.out.print("Enter your choice: ");
-            choice = input.nextInt();
+            choice = scanner.nextInt();
 
             switch (choice) {
                 case 1:easyMonster(scanner, p1, sh);
@@ -58,8 +57,7 @@ public class Game {
                 System.out.println("-----------------------------------");
                 System.out.println(" Your health power: " + p1.getHp());
                 System.out.println(" Monster health power: " + monster.getHp());
-                System.out.println(" your Gold " + p1.getGuld());
-
+                System.out.println(" you have earned (" + p1.getGuld() + ") gold");
                 System.out.println("-----------------------------------");
                 System.out.println("\nPress enter to attack the " + monster.getName() + "...");
                 System.out.println("-----------------------------------");

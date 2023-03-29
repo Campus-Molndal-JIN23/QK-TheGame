@@ -103,13 +103,13 @@ public class Player {
     @Override
     public String toString() {
         return  "-------------------"+
-                "\nPlayer: " + getName() +
-                "\nHealth: " + getHp() +
-                "\nLevel: " + getLevel() +
-                "\nExp: " + getExp() +
-                "\nGold: " + getGuld() +
-                "\nAttack: " + getAttack() +
-                "\nDefend: " + getDefend() +
+                "\n* Player: " + getName() +
+                "\n* Health: " + getHp() +
+                "\n* Level: " + getLevel() +
+                "\n* Exp: " + getExp() +
+                "\n* Gold: " + getGuld() +
+                "\n* Attack: " + getAttack() +
+                "\n* Defend: " + getDefend() +
                 "\n-------------------";
     }
 }
