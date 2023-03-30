@@ -2,8 +2,8 @@
 public class Monster {
     private String name;
     private int attack;
-    private int level;
     private int defense;
+    private int level;
     private int exp;
     private  int hp;
     private int gold;
@@ -35,6 +35,9 @@ public class Monster {
     public int getLevel() {
         return level;
     }
+    public void setDefense(int defense) {
+        this.defense += defense;
+    }
 
     public void attack(Player player) {
         int playerAttack = player.getAttack() - 1;
@@ -61,10 +64,5 @@ public class Monster {
         this.level ++;
         this.exp += 30;
     }
-    public int getDefense(){
-        return defense;
-    }
-    public void setDefense(int defense) {
-        this.defense += defense;
-    }
+
 }

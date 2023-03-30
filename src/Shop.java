@@ -28,6 +28,7 @@ public class Shop {
             System.out.println("2. Attack Amulet (+1 Attack) - 10 gold.");
             System.out.println("3. Defend Amulet (+1 toughness) - 10 gold.");
             System.out.println("4. Exit shop.");
+            System.out.println("<< Choice number >>");
             System.out.println("-----------------------------------");
             String choice = scanner.nextLine();
             switch (choice) {

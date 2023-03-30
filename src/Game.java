@@ -4,12 +4,12 @@ public class Game {
      private static Scanner scanner = new Scanner(System.in);
 
     public static void play() {
+        System.out.println("Welcome to Crush Kill Destroy!");
         System.out.println("Write your name: ");
         String name = scanner.nextLine();
         Player p1 = new Player(name,50);
         Shop sh = new Shop(p1);
         System.out.println("Hello, " + p1.getName() + "!");
-        System.out.println("Welcome to Crush Kill Destroy!");
         firstMenu(p1, sh);
 
     }
